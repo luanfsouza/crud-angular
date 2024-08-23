@@ -1,20 +1,23 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import {
+  BrowserModule,
+  provideClientHydration,
+} from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { NgModule } from '@angular/core';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatToolbarModule,
+    HttpClientModule,
   ],
-  providers: [
-    provideClientHydration()
-  ],
-  bootstrap: [AppComponent]
+  providers: [provideClientHydration()],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
